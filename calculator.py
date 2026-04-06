@@ -21,14 +21,16 @@ if op == "/" and b == 0:
 
 else:
     if op == "+":
-        print("result : ", sum(a,b))
+        res = sum(a,b)
 
     if op == "-":
-        print("result : ", diff(a,b))
+        res = diff(a,b)
 
     if op == "*":
-        print("result : ", mul(a,b))
+        res = mul(a,b)
 
     if op == "/":
-        print("result : ", div(a,b))
+        res = div(a,b)
+    
+    print("Result : ",res)
 
