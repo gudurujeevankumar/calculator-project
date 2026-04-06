@@ -28,15 +28,28 @@ def call(a,b,op):
 
         if op == "/":
             res = div(a,b)
-        
-        print("Result : ",res)
-    
+    return res
 
 a = float(input("Enter the first number : "))
 op = input("Enter the operator : ")
 b = float(input("Enter the second number : "))
 
-call(a,b,op)
+res = call(a,b,op)
+
+print("Result : ", res)
+
+while True:
+    a = res
+    op = input("If you want to do another operation give new operator or if don't want any operations to do enter ! : ")
+    
+    if op == "!":
+        break
+        
+    b = float(input("Enter the new value : "))
+    
+    if op in ["+","-","/","*"]:
+        res = call(a,b,op)
+        print("New result : ", res)
 
 
 
